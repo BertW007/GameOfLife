@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>let's play</title>
+    <link href="https://fonts.googleapis.com/css?family=VT323&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-glyphicons.css">
+    <script type="text/javascript" src="js/app.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <section id="game-menu">
+          <fieldset id="controls">
+            <div class="controls-header">
+              <h1 id="title">Game of Life</h1>
+            </div>
+            <button title="Play" id="play"><span class="glyphicon glyphicon-play"></span></button>
+            <button title="Pause" id="pause"><span class="glyphicon glyphicon-pause"></span></button>
+            <button title="Options" id="advenced"><span class="glyphicon glyphicon-cog"></span></button>
+            <button title="Refresh/Apply changes" id="reset"><span class="glyphicon glyphicon-refresh"></span></button>
+          </fieldset>
+
+          <form id="options" class="hidden">
+           <fieldset id="board-settings">
+            <legend><div class="option-icon">Board Settings:</div></legend>
+            <span>Width: </span> <input type="text" data-type="width" class="parameter" maxlength="3" value="100"><br>
+            <span>Height: </span> <input type="text" data-type="height" class="parameter" maxlength="3" value="100"><br>
+            <span>Cell size: </span> <input type="text" data-type="cellSize" class="parameter" maxlength="2" value="5">
+            <span>Speed: </span> <input type="text" data-type="speed" class="parameter" maxlength="1" value="2">
+           </fieldset>
+           <fieldset id="cells-color">
+            <legend><div class="option-icon">Cells color:</div></legend>
+            <span>Red: </span><input type="text" class="parameter" maxlength="3" value="0"><br>
+            <span>Green: </span><input type="text" class="parameter" maxlength="3" value="0"><br>
+            <span>Blue: </span><input type="text" class="parameter" maxlength="3" value="0"><br>
+            <span>Random colors </span><input type="checkbox" class="parameter"><br>
+           </fieldset>
+           <fieldset id="starting-patterns">
+            <legend><div class="option-icon">Starting patterns:</div></legend>
+            <span>R-pentomino </span><input type="radio" class="parameter" name="pattern" data-type="rpentomino" checked><br>
+            <span>Acorn </span><input type="radio" class="parameter" name="pattern" data-type="acorn"><br>
+            <span>Switch engine </span><input type="radio" class="parameter" name="pattern" data-type="switchengine"><br>
+            <span>7468M </span><input type="radio" class="parameter" name="pattern" data-type="7468m"><br>
+            <span>Multum in parvo </span><input type="radio" class="parameter" name="pattern" data-type="multuminparvo"><br>
+            <span>No starting pattern </span><input type="radio" class="parameter" name="pattern" data-type="none"><br>
+           </fieldset>
+          </form>
+        </section>
+
+        <section id="loading-screen" class="visible">
+          <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+          </div>
+        </section>
+
+        <section id="board">
+        </section>
+
+    </div>
+</body>
+
+</html>
