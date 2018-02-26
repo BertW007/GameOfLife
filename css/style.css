@@ -11,10 +11,16 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #cccccc;
-    font-family: 'Arial',sans-serif;
+  background-color: #cccccc;
+  font-family: 'Arial',sans-serif;
+  overflow: hidden;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 #controls {
   border-radius: 5px;
@@ -37,6 +43,7 @@ body {
 #controls button:hover {
   background-color: rgba(0,0,0,1);
 }
+
 #board div {
   width: 10px;
   height: 10px;
@@ -48,27 +55,25 @@ body {
 }
 
 #board div.live {
-    background-color: #000000;
+  background-color: #000000;
 }
 
 #board {
-    margin: 50px auto;
-    min-height: 100px;
-    min-width: 100px
+  margin: 0 auto;
 }
+
 #advenced {
-    float: right;
+  float: right;
 }
 #game-menu {
   width: 500px;
-  margin: 0 auto;
-  margin-top: 5px;
+  margin: 20px auto;
 }
 #game-menu::after {
   content: '';
   width: 100%;
   height: 1px;
-  top: 45px;
+  top: 70px;
   position: absolute;
   background-color: #cccccc;
 }
